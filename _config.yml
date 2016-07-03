@@ -1,21 +1,15 @@
-title:            sanlengjingvv
-description:      博客
-url:              # Site url, without a slash at the end.
-signoff:          黑水
-disqus_shortname: # disqus comment thread for post header options. ( leave blank if unwanted. )
-facebook_appid:   # appid for like button, remove from /_includes/share.html if unwanted.
-google_analytics: # set tracking, remove from /javascripts/basic.js if unwanted.
+# Site settings
+title: San's world
+email: hueidou163@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  个人博客。
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://san.sanrabbit.com" # the base hostname & protocol for your site
+#twitter_username: jekyllrb
+github_username:  hueidou
+disqus: hueidou
 
-links:
-  - name:         Blog
-    url:          http://sanlengjingvv.github.io/
-    external:     false
-  - name:         GitHub
-    url:          https://github.com/sanlengjingvv
-    external:     true
-highlighter:      pygments
-permalink:        pretty
-markdown:         redcarpet
-redcarpet:
-  extensions:
-    - smart
+# Build settings
+markdown: rdiscount
+
+permalink: /:year/:month/:day/:title.html
