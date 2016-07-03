@@ -6,6 +6,7 @@ disqus: y
 ---
 
 一、测试类*注1
+  
 ```java
 package com.testerhome;
 
@@ -70,12 +71,13 @@ public class Suite1 {
 ```
 
 二、连接两个Android设备或启动两个虚拟机
-使用
+使用  
 `adb devices`
-获取udid
+获取udid  
 
 三、项目路径下新建两个testng.xml
 testng1.xml
+  
 ```
 <?xml version="1.0" encoding="UTF-8"?>  
 <suite name="Suite1">
@@ -113,16 +115,16 @@ Port:4725
 bootstrapPort:4726
 
 五、导出依赖*注4
-因为是用maven工程创建的，所以先导出依赖到项目路径下的lib文件夹
-`mvn dependency:copy-dependencies -DoutputDirectory=lib`
+因为是用maven工程创建的，所以先导出依赖到项目路径下的lib文件夹  
+`mvn dependency:copy-dependencies -DoutputDirectory=lib`  
 
 六、执行测试
-先用Maven串行执行一次以编译出Class文件
+先用Maven串行执行一次以编译出Class文件  
 `mvn clean test`
-然后
-`java -classpath ".\target\test-classes" -Djava.ext.dirs=lib org.testng.TestNG -suitethreadpoolsize 2 testng1.xml testng2.xml`
-如果没有配置TestNG环境变量
-`java -classpath ".\target\test-classes;D:\Programs\testng-6.8\testng-6.8.jar" -Djava.ext.dirs=lib org.testng.TestNG -suitethreadpoolsize 2 testng1.xml testng2.xml`
+然后  
+`java -classpath ".\target\test-classes" -Djava.ext.dirs=lib org.testng.TestNG -suitethreadpoolsize 2 testng1.xml testng2.xml`  
+如果没有配置TestNG环境变量  
+`java -classpath ".\target\test-classes;D:\Programs\testng-6.8\testng-6.8.jar" -Djava.ext.dirs=lib org.testng.TestNG -suitethreadpoolsize 2 testng1.xml testng2.xml`  
 
 七、查看报告
 默认在项目路径下的test-output文件夹
