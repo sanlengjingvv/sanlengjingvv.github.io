@@ -70,12 +70,12 @@ public class Suite1 {
 }
 ```
 
-二、连接两个Android设备或启动两个虚拟机
+二、连接两个Android设备或启动两个虚拟机  
 使用  
 `adb devices`
 获取udid  
 
-三、项目路径下新建两个testng.xml
+三、项目路径下新建两个testng.xml  
 testng1.xml
   
 ```
@@ -92,6 +92,7 @@ testng1.xml
 ```
 
 testng2.xml
+  
 ```
 <?xml version="1.0" encoding="UTF-8"?>  
 <suite name="Suite2">
@@ -105,50 +106,50 @@ testng2.xml
 </suite>  
 ```
 
-四、开启两个appium server*注2、注3
-第一个：
-Port:4723
-bootstrapPort:4724
+四、开启两个appium server*注2、注3  
+第一个：  
+Port:4723  
+bootstrapPort:4724  
 
-第二个：
-Port:4725
-bootstrapPort:4726
+第二个：  
+Port:4725  
+bootstrapPort:4726  
 
-五、导出依赖*注4
-因为是用maven工程创建的，所以先导出依赖到项目路径下的lib文件夹  
-`mvn dependency:copy-dependencies -DoutputDirectory=lib`  
+五、导出依赖*注4  
+因为是用maven工程创建的，所以先导出依赖到项目路径下的lib文件夹   
+`mvn dependency:copy-dependencies -DoutputDirectory=lib`   
 
-六、执行测试
-先用Maven串行执行一次以编译出Class文件  
-`mvn clean test`
-然后  
-`java -classpath ".\target\test-classes" -Djava.ext.dirs=lib org.testng.TestNG -suitethreadpoolsize 2 testng1.xml testng2.xml`  
-如果没有配置TestNG环境变量  
+六、执行测试  
+先用Maven串行执行一次以编译出Class文件   
+`mvn clean test`  
+然后    
+`java -classpath ".\target\test-classes" -Djava.ext.dirs=lib org.testng.TestNG -suitethreadpoolsize 2 testng1.xml testng2.xml`   
+如果没有配置TestNG环境变量   
 `java -classpath ".\target\test-classes;D:\Programs\testng-6.8\testng-6.8.jar" -Djava.ext.dirs=lib org.testng.TestNG -suitethreadpoolsize 2 testng1.xml testng2.xml`  
 
-七、查看报告
-默认在项目路径下的test-output文件夹
+七、查看报告  
+默认在项目路径下的test-output文件夹  
 
-注1：
-这个测试类没有指定app路径，如果指定，同时unzip的时候会冲突。目前是复制了多个apk。
-File app = new File(appDir, "AppName"+port+".apk");
-并在appium server指定不同的临时文件路径，比如：
---tmp D:\tem1
---tmp D:\tem2
+注1：  
+这个测试类没有指定app路径，如果指定，同时unzip的时候会冲突。目前是复制了多个apk。  
+File app = new File(appDir, "AppName"+port+".apk");  
+并在appium server指定不同的临时文件路径，比如：  
+--tmp D:\tem1  
+--tmp D:\tem2  
+  
+注2：  
+两个端口的介绍可以看这两个链接：  
+appium 自动化测试教程 ppt(第二版)  
+http://testerhome.com/topics/284  
+Appium Android Bootstrap源码分析之简介  
+http://blog.csdn.net/zhubaitian/article/details/40619777  
+  
+注3：  
+如果使用到Selendroid或Chromium，还需要指定其他端口（需要修改测试类）  
+Selendroid port:8080  
+Selendroid port:8081  
+Chromium port:9515  
+Chromium port:9516  
 
-注2：
-两个端口的介绍可以看这两个链接：
-appium 自动化测试教程 ppt(第二版)
-http://testerhome.com/topics/284
-Appium Android Bootstrap源码分析之简介
-http://blog.csdn.net/zhubaitian/article/details/40619777
-
-注3：
-如果使用到Selendroid或Chromium，还需要指定其他端口（需要修改测试类）
-Selendroid port:8080
-Selendroid port:8081
-Chromium port:9515
-Chromium port:9516
-
-注4：
-本来准备直接用mvn test并行执行的，但没试出来传suitethreadpoolsize参数的办法
+注4：  
+本来准备直接用mvn test并行执行的，但没试出来传suitethreadpoolsize参数的办法  
