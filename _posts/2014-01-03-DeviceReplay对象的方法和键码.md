@@ -5,6 +5,8 @@ date: 2014-01-03 16:20:38
 disqus: y
 ---
   
+   
+          
 | 方法        | 说明           |
 | -------------------------- | -------------------------- |
 | MouseMove x, y      | 移动鼠标到屏幕坐标 (x,y) |
@@ -17,7 +19,7 @@ disqus: y
 | KeyDown key | 按住键盘键，参数Key使用键码。      |
 | KeyUp key  | 放开键盘键，参数Key使用键码。 |
 | SendString string | 键入字符串 |  
-  
+    
 [揭秘QTP的DeviceReplay对象](http://blog.csdn.net/testing_is_believing/article/details/2504745)这篇文章里的键码和本机（台式）不一致。从表里可以看出键码顺序对应键盘布局，估计是不同键盘导致的。下表是本机（台式）测试得到的。  
   
 | 数字键区 | 键码 |
