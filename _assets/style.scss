@@ -10,8 +10,8 @@ body {
   background: $background;
   color: #303030;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  font-size: 13px;
+  font-weight: 450;
+  font-size: 18px;
   line-height: 19px;
   padding: 0; margin: 0;
 }
@@ -53,7 +53,7 @@ footer {
   @include clearfix;
   @include box-sizing(border-box);
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   background: #fff;
   margin: 40px auto 20px;
   border-radius: 7px;
@@ -88,7 +88,7 @@ footer {
   width: 100%;
   border-width: 0;
   border-style: solid;
-  padding: 30px 60px;
+  padding: 2px 60px;
   margin: auto;
 }
 
@@ -184,7 +184,7 @@ section.post {
     text-transform: uppercase;
     text-align: center;
     line-height: 1.5em;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     .date { 
       color: #d0d0d0; font-size: 10px; 
     }
@@ -197,7 +197,7 @@ section.post {
 }
 
 section.post, section > p {
-  font-size: 14px; line-height: 1.6em;
+  font-size: 16px; line-height: 1.6em;
   * { max-width: 100%; }
   em strong { background-color: #ffffee; padding: 0 2px; }
   blockquote { 
@@ -252,6 +252,6 @@ img {
     left: 50%;
     font-size: 60px;
   }
-  .left { margin-left: -340px; }
-  .right {  margin-left: 320px; }
+  .left { margin-left: -420px; }
+  .right {  margin-left: 405px; }
 }

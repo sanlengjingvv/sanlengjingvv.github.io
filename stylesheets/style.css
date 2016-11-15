@@ -8,8 +8,8 @@ body {
   background: #f9f9f9;
   color: #303030;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  font-size: 13px;
+  font-weight: 450;
+  font-size: 18px;
   line-height: 19px;
   padding: 0;
   margin: 0; }
@@ -55,13 +55,13 @@ img {
   color: #8f8f8f; }
 
 .colour-1 {
-  color: #cc9944; }
+  color: #c94; }
 
 .colour-2 {
   color: #925; }
 
 .colour-3 {
-  color: #448844; }
+  color: #484; }
 
 .text-big {
   font-size: 24px;
@@ -94,7 +94,7 @@ footer {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   background: #fff;
   margin: 40px auto 20px;
   border-radius: 7px;
@@ -142,7 +142,7 @@ footer {
   width: 100%;
   border-width: 0;
   border-style: solid;
-  padding: 30px 60px;
+  padding: 2px 60px;
   margin: auto; }
 
 a, .as-link {
@@ -251,7 +251,7 @@ section.post {
     text-transform: uppercase;
     text-align: center;
     line-height: 1.5em;
-    margin-bottom: 60px; }
+    margin-bottom: 40px; }
     section.post h1 .date {
       color: #d0d0d0;
       font-size: 10px; }
@@ -265,7 +265,7 @@ section.post {
     border-top-right-radius: 3px; }
 
 section.post, section > p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6em; }
   section.post *, section > p * {
     max-width: 100%; }
@@ -357,6 +357,8 @@ img {
   left: 50%;
   font-size: 60px; }
 .paging .left {
-  margin-left: -340px; }
+  margin-left: -420px; }
 .paging .right {
-  margin-left: 320px; }
+  margin-left: 405px; }
+
+/*# sourceMappingURL=style.css.map */
