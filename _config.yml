@@ -18,3 +18,4 @@ markdown:         redcarpet
 redcarpet:
   extensions:
     - smart
+    - tables
