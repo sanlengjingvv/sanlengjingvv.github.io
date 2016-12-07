@@ -10,7 +10,7 @@ disqus: y
 
 **问题：**  
 脚本里每个线程代表一台设备，如果每个线程都登录一次，不符合真实场景。  
-这样需要线程组 A 登录一次，其他在 A 执行成功后再执行，并使用 A 获得 Cookie。  
+这样需要线程组 A 登录一次，其他线程组在 A 执行成功后再执行，并使用 A 获得 Cookie。  
 开始把 HTTP Cookie Manager 放在顶层测试计划下，发现其他线程组没有没有取到A得到的 Cookie。  
 搜索后发现，JMeter 每个线程都有自己的“Cookie 存储区域”  
 [JMeter文档](http://jmeter.apache.org/usermanual/component_reference.html)  
