@@ -1,6 +1,6 @@
 title:            sanlengjingvv
 description:      博客
-url:              # Site url, without a slash at the end.
+url:              https://github.com/sanlengjingvv
 signoff:          黑水
 disqus_shortname: # disqus comment thread for post header options. ( leave blank if unwanted. )
 google_analytics: # set tracking, remove from /javascripts/basic.js if unwanted.
